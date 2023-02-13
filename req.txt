@@ -1,0 +1,11 @@
+os
+time
+hashlib
+logging
+tqdm
+regex
+pdfminer.high_level 
+nltk
+re
+requests
+pandas
