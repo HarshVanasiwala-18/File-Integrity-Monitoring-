@@ -11,16 +11,16 @@ import requests
 import pandas as pd
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', filename= r'F:\Python Projects\File Integrity monitoring\log.txt', filemode='w')
-file = open(r'F:\Python Projects\File Integrity monitoring\hashes.csv', 'w')
+file = open(r'path\hashes.csv', 'w')
 file.write('Hash, File Name\n')
 
 def virus_total_file_malicious():
     headers = {
         "accept": "application/json",
-        "x-apikey": '6508b0b1c790507dcebd5d1c646d1b23c85d601597f526470d429884256fa375'
+        "x-apikey": 'API KEY'
 
     }
-    df = pd.read_csv(r'F:\Python Projects\File Integrity monitoring\hash.csv')
+    df = pd.read_csv(r'path\hashes.csv')
     for hash in df['Hash']:
         if hash != 'None':
             url = f"https://www.virustotal.com/api/v3/files/{hash}"
